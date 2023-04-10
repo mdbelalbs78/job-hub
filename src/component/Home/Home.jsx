@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
+import './Home.css'
+import Feature from "../Feature/Feature";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -10,11 +12,17 @@ const Home = () => {
       .then((data) => setProducts(data));
   }, []);
 
+const [features,setFeaturs] = useState([]);
 
-  
+useEffect(()=>{
+    fetch('data.json')
+    .then(res => res.json())
+    .then(data => setFeaturs(data))
+},[])
+
   return (
     <div>
-      <div className="text-2xl">
+      <div className="">
         <div>
           <div className="card lg:card-side bg-base-100 shadow-xl">
             <div className="card-body">
@@ -52,6 +60,16 @@ const Home = () => {
         {products.map((product) => (
           <Product key={product.key} product={product}></Product>
         ))}
+      </div>
+      <div className="feature-container">
+          <div className="features-container">
+              {
+                features.map(feture => <Feature
+                key={feture.id}
+                feture= {feture}
+                ></Feature>)
+              }
+          </div>
       </div>
     </div>
   );

@@ -1,29 +1,55 @@
 [
-
     {
       "job": "300 Jobs Available",
-      "watchTime": 152,
       "title": "Account & Finance",
       "icon": "https://i.ibb.co/KW4X9Fn/accounts-1.png",         
-      "id": "1"
+      "id": "1",
+      "img": "https://i.ibb.co/2j8dQmf/google-1-1-1.png",
+      "dis": "Google LLC",
+      "description": "Technical Database Engineer",
+      "button1": "Onsite",
+      "button2": "Full Time",
+      "location": "Dhaka, Bangladesh",
+      "salary": "Salary : 100K - 150K"
     },
     {
       "job": "100+ Jobs Available",
       "title": "Creative Design",
       "icon": "https://i.ibb.co/8jJwjC2/business-1.png",
-      "id": "2"
+      "id": "2",
+      "img": "https://i.ibb.co/mJsN7LR/netflix-4-1.png",
+      "description": "Senior Product Designer",
+      "dis": "Netflix",
+      "button1": "Onsite",
+      "button2": "Full Time",
+      "location": "Dhaka, Bangladesh",
+      "salary": "Salary : 100K - 150K"
     },
     {
       "job": "150 Jobs Available",
       "title": "Marketing & Sales",
       "icon": "https://i.ibb.co/0KzZtzv/chip-1.png",
-      "id": "3"
+      "id": "3",
+      "img": "https://i.ibb.co/wpn3nd1/tesla-9-1.png",
+      "description": "Software Engineer",
+      "dis": "Tesla", 
+      "button1": "Onsite",
+      "button2": "Full Time",
+      "location": "Dhaka, Bangladesh",
+      "salary": "Salary : 100K - 150K"
     },
     {
       "authorName": "224 Jobs Available",
       "title": "Engineering Job",
       "icon": "https://i.ibb.co/84rZ2FP/social-media-1.png",
-      "id": "4"
+      "id": "4",
+      "img": "https://i.ibb.co/F3wCxbD/google-1-1-1-1.png",
+      "dis": "Google LLC",
+      "button1": "Remote",
+      "button2": "Full Time",
+      "description": "Technical Database Engineer",
+      "location": "Dhaka, Bangladesh",
+      "salary": "Salary : 100K - 150K"
     }
     
   ]
