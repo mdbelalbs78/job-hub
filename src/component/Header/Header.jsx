@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Headar.css";
 
 const Header = () => {
   return (
@@ -25,38 +26,26 @@ const Header = () => {
                 </svg>
               </label>
             </div>
-            <a className="btn btn-ghost normal-case text-2xl font-semibold">
-              Destination
+            <a className="btn btn-ghost  normal-case text-2xl font-semibold">
+              job hub
             </a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
-              <div className="nav-link text-xl">
-                <Link to="/">Statistics</Link>
+              <div className="nav-link text-xl  justify-items-end space-x-4 ">
+                <Link to="/statistics">Statistics</Link>
                 <Link to="/applied">Applied Jobs</Link>
                 <Link to="/blog">Blog</Link>
               </div>
             </ul>
           </div>
           <div className="navbar-end">
-            <a className="apply p-5">Star Applying</a>
+            <button className="text-2xl bg-slate-500 p-2 rounded-lg ">Star Applying</button>
           </div>
         </div>
       </div>
-      <div>
-        <div className="card lg:card-side bg-base-100 shadow-xl">
-          <div className="card-body">
-            <h2 className="card-title">New album is released!</h2>
-            <p>Click the button to listen on Spotiwhy app.</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Listen</button>
-            </div>
-          </div>
-          <figure>
-            <img src="/public/All Images/P3OLGJ1 copy 1.png" alt="Album" />
-          </figure>
-        </div>
-      </div>
+   
+      
     </div>
   );
 };
