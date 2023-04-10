@@ -19,14 +19,14 @@ const ViewDetails = () => {
         <div className="card-body">
           <h2 className="card-title">Job Details</h2>
           <p>{details.salary}</p>
-          <p>Job Title: {details.title}</p>
+          <p>Job Title: {details.dis}</p>
           <h2 className="card-title">Contact Information</h2>
-          
+
           <p>Phone:{details.phone}</p>
           <p>email:{details.email}</p>
           <p>Address:{details.address}</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+          <div className="card-actions ">
+            <button className="btn btn-primary">Apply Now</button>
           </div>
         </div>
       </div>
