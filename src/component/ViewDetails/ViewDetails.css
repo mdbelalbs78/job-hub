@@ -1,0 +1,8 @@
+.view {
+    display: flex;
+    
+    
+}
+.card-body :where(p) {
+    flex-grow: 0;
+}

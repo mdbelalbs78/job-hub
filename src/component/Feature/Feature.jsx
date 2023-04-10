@@ -28,9 +28,8 @@ const Feature = ({ feture }) => {
             <p className="card-actions justify-start">{salary}</p>
           </div>
           <div class="card-actions justify-start">
-            <Link to={`viewDetails/${id}`}>
-              
-             <button>View</button>
+            <Link to={`viewDetails/${id}`}>              
+             <button className="bg-slate-300 p-3 rounded-md">View Details</button>
             </Link>
           </div>
         </div>
