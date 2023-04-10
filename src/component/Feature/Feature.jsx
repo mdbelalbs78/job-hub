@@ -1,9 +1,15 @@
 import React from "react";
 import "./Feature.css";
+import { Link } from "react-router-dom";
 
 const Feature = ({ feture }) => {
-  console.log(feture);
-  const { salary, img, location, description, dis,button1,button2 } = feture;
+  // console.log(feture);
+  const { salary, img, location, description, dis, button1, button2,id } = feture;
+
+  const handleAddToCart = (feture) => {
+    console.log(feture);
+  };
+
   return (
     <div className="cart">
       <div class="card card-compact w-96 bg-base-100 shadow-xl">
@@ -22,7 +28,10 @@ const Feature = ({ feture }) => {
             <p className="card-actions justify-start">{salary}</p>
           </div>
           <div class="card-actions justify-start">
-            <button class="bg-slate-300 p-3 rounded-md">Buy Now</button>
+            <Link to={`viewDetails/${id}`}>
+              
+             <button>View</button>
+            </Link>
           </div>
         </div>
       </div>

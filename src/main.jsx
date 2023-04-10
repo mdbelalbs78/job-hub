@@ -9,6 +9,7 @@ import {
 import App from './App';
 import Home from './component/Home/Home';
 import Shop from './component/Shop/Shop';
+import ViewDetails from './component/ViewDetails/ViewDetails';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,17 @@ const router = createBrowserRouter([
       {
         path: 'shop',
         element: <Shop></Shop>
+      },
+      {
+        path: 'viewDetails/:id',
+        element: <ViewDetails></ViewDetails>,
+        loader: async ({ params }) => {
+          const res = await fetch(`/public/data.json`)
+          const data = await res.json();
+          // console.log(data)
+          const findJob = data.find(d => d.id === params.id)
+          return findJob;
+        }
       }
     ]
   }
