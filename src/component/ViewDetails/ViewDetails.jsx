@@ -5,8 +5,14 @@ import "./ViewDetails.css";
 const ViewDetails = () => {
   const details = useLoaderData();
   console.log(details);
+ 
   return (
-    <div className="view">
+    <div>
+      <div className="jobD text-3xl">
+         <h2 >Job Details</h2>
+      </div>
+       <div className="view">
+      
       <div>
         <div className="card-body max-w-md ">
           <p>{details.JobDescription}</p>
@@ -30,6 +36,7 @@ const ViewDetails = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

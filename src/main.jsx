@@ -10,6 +10,7 @@ import App from './App';
 import Home from './component/Home/Home';
 import Shop from './component/Shop/Shop';
 import ViewDetails from './component/ViewDetails/ViewDetails';
+import Blog from './component/Blog/Blog';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: 'shop',
         element: <Shop></Shop>
+      },
+      {
+         path: 'blog',
+         element: <Blog></Blog>
       },
       
       {

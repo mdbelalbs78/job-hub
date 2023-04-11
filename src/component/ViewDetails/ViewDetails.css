@@ -1,8 +1,14 @@
 .view {
     display: flex;
-    
-    
+
+
 }
+
 .card-body :where(p) {
     flex-grow: 0;
+}
+
+.jobD {
+    text-align: center;
+    margin: 50px;
 }
