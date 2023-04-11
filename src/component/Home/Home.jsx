@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
-import './Home.css'
+
+import "./Home.css";
 import Feature from "../Feature/Feature";
 
 const Home = () => {
@@ -12,13 +13,13 @@ const Home = () => {
       .then((data) => setProducts(data));
   }, []);
 
-const [features,setFeaturs] = useState([]);
+  const [features, setFeaturs] = useState([]);
 
-useEffect(()=>{
-    fetch('data.json')
-    .then(res => res.json())
-    .then(data => setFeaturs(data))
-},[])
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((data) => setFeaturs(data));
+  }, []);
 
   return (
     <div>
@@ -39,9 +40,6 @@ useEffect(()=>{
                 <button className="btn btn-primary bg-bt">Get Started</button>
               </p>
 
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Listen</button>
-              </div>
             </div>
             <figure>
               <img src="/public/All Images/P3OLGJ1 copy 1.png" alt="Album" />
@@ -61,15 +59,19 @@ useEffect(()=>{
           <Product key={product.key} product={product}></Product>
         ))}
       </div>
+      <div className="text-center pb-5 mb-5  featureT">
+        <h2 className="text-5xl p-5">Featured Jobs</h2>
+        <p>
+          Explore thousands of job opportunities with all the information you
+          need. Its your future
+        </p>
+      </div>
       <div className="feature-container">
-          <div className="features-container">
-              {
-                features.map(feture => <Feature
-                key={feture.id}
-                feture= {feture}
-                ></Feature>)
-              }
-          </div>
+        <div className="features-container">
+          {features.map((feture) => (
+            <Feature key={feture.id} feture={feture}></Feature>
+          ))}
+        </div>
       </div>
     </div>
   );
