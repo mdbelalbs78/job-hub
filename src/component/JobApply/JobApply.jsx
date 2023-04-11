@@ -4,7 +4,7 @@ import ApplyDetails from '../ApplyDetails/ApplyDetails';
 
 const JobApply = () => {
     const [apply,setApply] = useState([]);
-    // const pData = useActionData
+  
     useEffect(()=>{
         fetch('../../../public/data.json')
         .then(res => res.json())

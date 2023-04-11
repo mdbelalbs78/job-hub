@@ -1,0 +1,13 @@
+.dataPass {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 100px;
+}
+
+div img {
+    height: 50%;
+    /* width: 20%; */
+    padding: 5px;
+
+}

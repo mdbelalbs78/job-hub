@@ -12,6 +12,8 @@ import Shop from './component/Shop/Shop';
 import ViewDetails from './component/ViewDetails/ViewDetails';
 import Blog from './component/Blog/Blog';
 import JobApply from './component/JobApply/JobApply';
+import Reachart from './component/Reachart/Reachart';
+import DataPass from './component/Product/DataPass/DataPass';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,15 @@ const router = createBrowserRouter([
       {
         path: 'applied',
         element: <JobApply></JobApply>
+      },
+    
+      {
+        path:'statistics',
+        element: <Reachart></Reachart>
+      },
+      {
+        path: 'datapass',
+        element: <DataPass></DataPass>
       },
 
       {

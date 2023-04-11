@@ -1,31 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ApplyDetails.css";
+import { getShoppingCart } from "../../Utilitis/fakedb";
+import DataPass from "../Product/DataPass/DataPass";
+
 
 const ApplyDetails = ({ app }) => {
-  const { img, description, dis, button1, button2 } = app;
+
+  const applyButton = getShoppingCart()
+  // console.log(applyButton);
+
+  const [products, setProducts] = useState([]);
+   
+  const [bt, setBt] = useState([])
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
+
+  useEffect(()=>{
+    const but = []
+    for(const id in applyButton){
+      const applyFound = products.find(pt=> pt.id === id)
+      if(applyFound){
+       but.push(applyFound);
+      }
+    }
+    setBt(but)
+  },[products])
+
+  // console.log(bt)
+
+  // useEffect kore data ante hobe
+  // applyButton thake je data pabo setar upor for in korte hobe
+  // useEffect thake je data pabo otar upor find chalabo for in er vitore
+  // find kore je data pabo ota print kore dibo
+
   return (
+
     <div>
-      <div className="card card-side bg-base-100 shadow-xl">
-        <div className="dFlex ">
-          <div>
-            <figure>
-              <img className="p-3 mr-5 h-15 w-25" src={img} alt="Movie" />
-            </figure>
-          </div>
-          <div>
-            <h2 className="text-2xl">{description}</h2>
-            <p>{dis}</p>
-            <button class="bg-slate-300 p-3 rounded-md mr-5 pr-5">{button1}</button>
-            <button class="bg-slate-300 p-3 rounded-md mr-5 pr-5">{button2}</button>
-          </div>
-        </div>
-        <div className="card-body">
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Watch</button>
-          </div>
-        </div>
-      </div>
+        {
+          bt.map(ct => <DataPass
+             key={ct.id}
+             ct = {ct}
+            ></DataPass>)
+        }
+        
     </div>
+
+    
   );
 };
 

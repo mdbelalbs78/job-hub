@@ -2,10 +2,7 @@ import React from "react";
 import "./Feature.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faLocationDot,
-  faLocationPin,
-  faCircleDollarToSlot,
-} from "@fortawesome/free-solid-svg-icons";
+faLocationDot,faCircleDollarToSlot,} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Feature = ({ feture }) => {
