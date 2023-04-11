@@ -11,6 +11,7 @@ import Home from './component/Home/Home';
 import Shop from './component/Shop/Shop';
 import ViewDetails from './component/ViewDetails/ViewDetails';
 import Blog from './component/Blog/Blog';
+import JobApply from './component/JobApply/JobApply';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,15 @@ const router = createBrowserRouter([
       {
          path: 'blog',
          element: <Blog></Blog>
+      },
+      {
+        path: 'applied',
+        element: <JobApply></JobApply>
+      },
+
+      {
+        path: '*',
+        element:<div>44000444</div>
       },
       
       {

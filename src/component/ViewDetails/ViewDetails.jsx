@@ -1,10 +1,14 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import "./ViewDetails.css";
+import { addToDb } from "../../Utilitis/fakedb";
 
 const ViewDetails = () => {
   const details = useLoaderData();
-  console.log(details);
+
+  const handleAddToFakeDb = (id) => {
+      addToDb(id);
+  }
  
   return (
     <div>
@@ -32,7 +36,7 @@ const ViewDetails = () => {
           <p>email:{details.email}</p>
           <p>Address:{details.address}</p>
           <div className="card-actions ">
-            <button className="btn btn-primary">Apply Now</button>
+            <button onClick={()=>handleAddToFakeDb(details.id)} className="btn btn-primary">Apply Now</button>
           </div>
         </div>
       </div>
