@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
+import img from "../../assets/P3OLGJ1 copy 1.png"
 
 import "./Home.css";
 import Feature from "../Feature/Feature";
@@ -13,7 +14,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetch("data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -21,7 +22,7 @@ const Home = () => {
   const [features, setFeaturs] = useState([]);
 
   useEffect(() => {
-    fetch("data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => setFeaturs(data));
   }, []);
@@ -35,18 +36,18 @@ const Home = () => {
               <h2 className="card-title text-5xl">
                 One Step <br /> Closer To Your <br /> Dream Job{" "}
               </h2>
-              <p>
+              <p className="mt-5">
                 <small>
                   Explore thousands of job opportunities <br /> with all the
                   information you need. <br /> Its your future. Come find it.
                   Manage all <br /> your job application from start to finish.
                 </small>
                 <br />
-                <button className="btn btn-primary bg-bt">Get Started</button>
+                <button className="btn btn-primary bg-bt mt-12">Get Started</button>
               </p>
             </div>
             <figure>
-              <img src="/public/All Images/P3OLGJ1 copy 1.png" alt="Album" />
+              <img src={img} alt="Album" />
             </figure>
           </div>
         </div>

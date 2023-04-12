@@ -14,6 +14,7 @@ import Blog from './component/Blog/Blog';
 import JobApply from './component/JobApply/JobApply';
 import Reachart from './component/Reachart/Reachart';
 import DataPass from './component/Product/DataPass/DataPass';
+import ApplyDetails from './component/ApplyDetails/ApplyDetails';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'applied',
-        element: <JobApply></JobApply>
+        element: <ApplyDetails></ApplyDetails>
       },
     
       {
@@ -47,21 +48,20 @@ const router = createBrowserRouter([
       },
 
       {
-        path: '*',
-        element:<div>44000444</div>
-      },
-      
-      {
         path: 'viewDetails/:id',
         element: <ViewDetails></ViewDetails>,
         loader: async ({ params }) => {
-          const res = await fetch(`/public/data.json`)
+          const res = await fetch(`/data.json`)
           const data = await res.json();
           // console.log(data)
           const findJob = data.find(d => d.id === params.id)
           return findJob;
         }
-      }
+      },
+      {
+        path: '*',
+        element:<div>44000444</div>
+      },
     ]
   }
 ])

@@ -13,17 +13,19 @@ const Feature = ({ feture }) => {
     feture;
 
   return (
-    <div className="cart">
-      <div class="card card-compact w-96 bg-base-100 shadow-xl ">
+    <div className="cart ">
+      <div className="card card-compact w-96 bg-base-100  ">
         <figure>
           <img className="" src={img} alt="Shoes" />
         </figure>
-        <div class="card-body">
-          <h2 class="card-title">{description}</h2>
+        <div className="card-body">
+         <div>
+           <h2 className="card-title">{description}</h2>
           <p className="card-actions justify-start">{dis}</p>
+         </div>
           <div className="card-actions justify-start">
-            <button class="bg-slate-300 p-3 rounded-md">{button1}</button>
-            <button class="bg-slate-300 p-3 rounded-md">{button2}</button>
+            <button className="bg-slate-300 p-3 rounded-md">{button1}</button>
+            <button className="bg-slate-300 p-3 rounded-md">{button2}</button>
           </div>
           <div className="flex">
             <p className="card-actions justify-start">

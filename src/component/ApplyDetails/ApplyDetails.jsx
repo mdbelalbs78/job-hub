@@ -3,52 +3,67 @@ import "./ApplyDetails.css";
 import { getShoppingCart } from "../../Utilitis/fakedb";
 import DataPass from "../Product/DataPass/DataPass";
 
-
-const ApplyDetails = ({ app }) => {
-
-  const applyButton = getShoppingCart()
-  // console.log(applyButton);
-
+const ApplyDetails = () => {
+  const applyButton = getShoppingCart();
   const [products, setProducts] = useState([]);
-   
-  const [bt, setBt] = useState([])
+  const [apps, setApps] = useState(false);
+  const [bt, setBt] = useState([]);
+
+  const [news,setNews] = useState([]);
+
   useEffect(() => {
-    fetch("data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
 
-  useEffect(()=>{
-    const but = []
-    for(const id in applyButton){
-      const applyFound = products.find(pt=> pt.id === id)
-      if(applyFound){
-       but.push(applyFound);
+  useEffect(() => {
+    const but = [];
+    for (const id in applyButton) {
+      const applyFound = products.find((pt) => pt.id === id);
+      if (applyFound) {
+        but.push(applyFound);
       }
     }
-    setBt(but)
-  },[products])
+    setNews(but)
+    setBt(but);
+  }, [products]);
 
-  // console.log(bt)
 
-  // useEffect kore data ante hobe
-  // applyButton thake je data pabo setar upor for in korte hobe
-  // useEffect thake je data pabo otar upor find chalabo for in er vitore
-  // find kore je data pabo ota print kore dibo
+  const handleFullTime = () =>{
+      const newsState = bt.filter(p => p.button1 === 'Remote')
+      setNews(newsState);
+  }
+
+  const handleTimeRemote = () => {
+    const newsState = bt.filter(p => p.button1 === 'Onsite')
+    setNews(newsState);
+  }
 
   return (
-
-    <div>
-        {
-          bt.map(ct => <DataPass
-             key={ct.id}
-             ct = {ct}
-            ></DataPass>)
-        }
-        
+    <div className="text-end pr-10 m-16">
+      <div className="dropdown dropdown-bottom">
+        <label tabIndex={0} className="btn m-1">
+          Click
+        </label>
+        <ul
+          tabIndex={0}
+          className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+        >
+          <li>
+            <a onClick={handleFullTime}>Full Time</a>
+          </li>
+          <li>
+            <a onClick={handleTimeRemote}>Remote</a>
+          </li>
+        </ul>
+      </div>
+      <div className="mx-20">
+        {news.map((ct) => (
+          <DataPass key={ct.id} ct={ct}></DataPass>
+        ))}
+      </div>
     </div>
-
-    
   );
 };
 
