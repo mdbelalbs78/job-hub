@@ -13,3 +13,14 @@
     justify-content: center;
     margin-left: 100px;
 }
+
+@media screen and (max-width: 576px) {
+    .shop-container { 
+        margin: 50px;
+        padding: 50px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .bb{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

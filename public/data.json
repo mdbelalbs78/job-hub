@@ -69,6 +69,7 @@
       "email": "info@gmail.com",
       "address": "Dhanmondi 32, Sukraba Dhaka, Bangladesh"
     },
+
     {
       "authorName": "224 Jobs Available",
       "title": "Engineering Job",
@@ -91,7 +92,55 @@
       "phone": "0179000000",
       "email": "info@gmail.com",
       "address": "Dhanmondi 32, Sukraba Dhaka, Bangladesh"
+    },
+
+    {
+      "authorName": "224 Jobs Available",
+      "title": "Engineering Job",
+      "icon": "https://i.ibb.co/nzWYm8k/Career-Hub.png",
+      "id": "5",
+      "img": "https://i.ibb.co/F3wCxbD/google-1-1-1-1.png",
+      "dis": "Google LLC",
+      "button1": "Remote",
+      "button2": "Full Time",
+      "description": "CareerHub",
+      "location": "Dhaka, Bangladesh",
+      "salary": "Salary : 100K - 150K",
+      "JobDescription": "Job Description: A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+
+      "JobResponsibility": "Job Responsibility: Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
+
+      "educational": "Educational Requirements: Bachelor degree to complete any reputational university.",
+
+      "experiences:": "Experiences: 2-3 Years in this field.",
+      "phone": "0179000000",
+      "email": "info@gmail.com",
+      "address": "Dhanmondi 32, Sukraba Dhaka, Bangladesh"
+    },
+
+    {
+      "authorName": "224 Jobs Available",
+      "title": "Engineering Job",
+      "icon": "https://i.ibb.co/hcgpqMy/Group-10021.png",
+      "id": "6",
+      "img": "https://i.ibb.co/F3wCxbD/google-1-1-1-1.png",
+      "dis": "Google LLC",
+      "button1": "Remote",
+      "button2": "Full Time",
+      "description": "airbnb",
+      "location": "Dhaka, Bangladesh",
+      "salary": "Salary : 100K - 150K",
+      "JobDescription": "Job Description: A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+
+      "JobResponsibility": "Job Responsibility: Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
+
+      "educational": "Educational Requirements: Bachelor degree to complete any reputational university.",
+
+      "experiences:": "Experiences: 2-3 Years in this field.",
+      "phone": "0179000000",
+      "email": "info@gmail.com",
+      "address": "Dhanmondi 32, Sukraba Dhaka, Bangladesh"
     }
-    
+     
   ]
   

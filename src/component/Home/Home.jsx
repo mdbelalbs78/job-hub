@@ -6,6 +6,11 @@ import Feature from "../Feature/Feature";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  const [showAll, setShowAll] = useState(false);
+
+  const handleShowAll = () => {
+    setShowAll(true);
+  };
 
   useEffect(() => {
     fetch("data.json")
@@ -39,7 +44,6 @@ const Home = () => {
                 <br />
                 <button className="btn btn-primary bg-bt">Get Started</button>
               </p>
-
             </div>
             <figure>
               <img src="/public/All Images/P3OLGJ1 copy 1.png" alt="Album" />
@@ -55,7 +59,7 @@ const Home = () => {
         </p>
       </div>
       <div className="shop-container">
-        {products.map((product) => (
+        {products.slice(0, showAll ? 4 : 4).map((product) => (
           <Product key={product.key} product={product}></Product>
         ))}
       </div>
@@ -68,10 +72,13 @@ const Home = () => {
       </div>
       <div className="feature-container">
         <div className="features-container">
-          {features.map((feture) => (
+          {features.slice(0, showAll ? 6 : 4).map((feture) => (
             <Feature key={feture.id} feture={feture}></Feature>
           ))}
         </div>
+      </div>
+      <div onClick={handleShowAll} className="text-center m-5 pt-5 ">
+        <button className="bg-slate-300 p-3 rounded-md ">See More</button>
       </div>
     </div>
   );

@@ -2,7 +2,9 @@ import React from "react";
 import "./Feature.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-faLocationDot,faCircleDollarToSlot,} from "@fortawesome/free-solid-svg-icons";
+  faLocationDot,
+  faCircleDollarToSlot,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Feature = ({ feture }) => {
@@ -12,7 +14,7 @@ const Feature = ({ feture }) => {
 
   return (
     <div className="cart">
-      <div class="card card-compact w-96 bg-base-100 shadow-xl">
+      <div class="card card-compact w-96 bg-base-100 shadow-xl ">
         <figure>
           <img className="" src={img} alt="Shoes" />
         </figure>
@@ -39,10 +41,11 @@ const Feature = ({ feture }) => {
                 View Details
               </button>
             </Link>
-          </div>
+          </div> 
         </div>
       </div>
     </div>
+    
   );
 };
 

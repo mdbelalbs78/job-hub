@@ -33,7 +33,7 @@ const Header = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <div className="nav-link text-xl  justify-items-end space-x-4 ">
-              <Link to="/">Home</Link>
+                <Link to="/">Home</Link>
                 <Link to="/statistics">Statistics</Link>
                 <Link to="/applied">Applied Jobs</Link>
                 <Link to="/blog">Blog</Link>
@@ -41,10 +41,13 @@ const Header = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <button className="text-2xl bg-slate-500 p-2 rounded-lg ">Star Applying</button>
+            <button className="text-2xl bg-slate-500 p-2 rounded-lg ">
+              Star Applying
+            </button>
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
