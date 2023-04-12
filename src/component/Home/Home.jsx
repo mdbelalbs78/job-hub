@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
-import img from "../../assets/P3OLGJ1 copy 1.png"
+import img from "../../assets/P3OLGJ1 copy 1.png";
 
 import "./Home.css";
 import Feature from "../Feature/Feature";
@@ -31,19 +31,21 @@ const Home = () => {
     <div>
       <div className="">
         <div>
-          <div className="card lg:card-side bg-base-100 shadow-xl">
-            <div className="card-body">
+          <div className="card lg:card-side bg-base-100 ">
+            <div className="card-body ml-10 mt-8">
               <h2 className="card-title text-5xl">
                 One Step <br /> Closer To Your <br /> Dream Job{" "}
               </h2>
-              <p className="mt-5">
+              <p className="mt-5 text-2xl">
                 <small>
                   Explore thousands of job opportunities <br /> with all the
                   information you need. <br /> Its your future. Come find it.
                   Manage all <br /> your job application from start to finish.
                 </small>
                 <br />
-                <button className="btn btn-primary bg-bt mt-12">Get Started</button>
+                <button className="btn btn-primary bg-bt mt-12">
+                  Get Started
+                </button>
               </p>
             </div>
             <figure>
