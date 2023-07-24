@@ -12,6 +12,7 @@ import JobApply from "./component/JobApply/JobApply";
 import Reachart from "./component/Reachart/Reachart";
 import DataPass from "./component/Product/DataPass/DataPass";
 import ApplyDetails from "./component/ApplyDetails/ApplyDetails";
+import About from "./component/About/About";
 
 const router = createBrowserRouter([
   {
@@ -22,10 +23,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-    // {
-    //   path: "/about",
-    //   element: <About></About>
-    // },
+    {
+      path: "/about",
+      element: <About></About>
+    },
       {
         path: "blog",
         element: <Blog></Blog>,
